@@ -1,83 +1,119 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TaxiAndes 24/7</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
       color: #333;
-      text-align: center;
     }
     header {
       background-color: #FEB330;
-      padding: 20px;
+      padding: 50px 20px;
+      text-align: center;
     }
-    header img {
-      width: 150px;
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #222;
     }
-    h1 {
-      margin: 10px 0;
-      font-size: 2.2em;
+    .section {
+      padding: 60px 20px;
+      text-align: center;
     }
-    .slogan {
-      font-size: 1.1em;
-      color: #555;
-      margin-bottom: 20px;
+    .orange-band {
+      background-color: #FEB330;
+      height: 150px;
+      position: relative;
+      overflow: hidden;
     }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      font-size: 16px;
-      text-decoration: none;
+    .auto-img {
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+      margin-top: -150px;
+      z-index: 2;
+    }
+    .btn-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 999;
+    }
+    .btn-fixed a {
+      background-color: #25D366;
       color: white;
-      border-radius: 8px;
-      transition: background-color 0.3s;
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 50px;
+      font-size: 16px;
+      text-align: center;
     }
-    .whatsapp { background-color: #25D366; }
-    .llamar   { background-color: #007BFF; }
-    .mapa     { background-color: #6c757d; }
-    .facebook { background-color: #3b5998; }
-    .btn:hover {
-      opacity: 0.85;
-    }
-    .info {
-      padding: 20px;
+    .btn-fixed a.call {
+      background-color: #007BFF;
     }
     footer {
       background-color: #222;
       color: #ccc;
-      padding: 15px;
-      margin-top: 30px;
+      padding: 20px;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="logo-taxiandes247.png" alt="Logo Taxi Andes">
   <h1>TaxiAndes 24/7</h1>
-  <div class="slogan">Seguridad, confiabilidad y privacidad</div>
+  <p>Seguridad, confiabilidad y privacidad</p>
 </header>
 
-<div class="info">
-  <p>📍 Zonas: Los Andes, San Felipe, Catemu, Llay Llay, Las Vegas, Santiago y alrededores</p>
-  <p>📅 Disponible 24/7</p>
-  <p>📞 +56 9 7311 2176</p>
+<div class="orange-band"></div>
+<div class="section" data-aos="fade-up">
+  <img src="creta-grand-web.png" alt="Hyundai Grand Creta" class="auto-img">
+</div>
 
-  <a class="btn whatsapp" href="https://wa.me/56973112176" target="_blank">📲 WhatsApp</a>
-  <a class="btn llamar" href="tel:+56973112176">📞 Llamar</a>
-  <a class="btn mapa" href="https://www.google.com/maps/place/Los+Andes,+Valparaíso,+Chile" target="_blank">🗺️ Ver en mapa</a>
-  <a class="btn facebook" href="https://www.facebook.com/oscareduardo.zunigariquelme" target="_blank">📘 Facebook</a>
+<div class="section" data-aos="fade-up">
+  <h2>🚖 Servicios Especiales 24/7</h2>
+  <p>Viajes a Santiago, Aeropuerto, clínicas y más.</p>
+</div>
+
+<div class="section" data-aos="fade-up">
+  <h2>📍 Zonas de cobertura</h2>
+  <p>Los Andes, San Felipe, Catemu, Llay Llay, Las Vegas y alrededores.</p>
+</div>
+
+<div class="section" data-aos="fade-up">
+  <h2>📞 Contáctanos</h2>
+  <p>Disponible todos los días. Número directo: <strong>+56 9 7311 2176</strong></p>
 </div>
 
 <footer>
-  © 2025 TaxiAndes 24/7. Todos los derechos reservados.
+  © 2025 TaxiAndes 24/7
 </footer>
+
+<div class="btn-fixed">
+  <a href="https://wa.me/56973112176" target="_blank">WhatsApp</a>
+  <a href="tel:+56973112176" class="call">Llamar</a>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
